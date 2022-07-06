@@ -1,4 +1,4 @@
-## GLASSMORPHİSM CARD DESİGN
+## GLASSMORPHıSM CARD DESIGN
 
 ![desktop](/assets/Glassmorphism.png)
 
