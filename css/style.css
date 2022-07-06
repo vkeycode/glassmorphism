@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; ;
+    background: linear-gradient(0deg, #b8ff2e,#2ea8ff);
+    background-attachment: fixed;
+}
+.images{
+    width: 15vh;
+    height: 15vh;
+}
+.container{
+    position: relative;
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding: 20px 0;
+}
+.container .card{
+    position: relative;
+    height: 250px;
+    background: #fff;
+    display: flex;
+    width: 45%;
+    margin: 30px 0;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.container .card .imgbx{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(255, 208, 208, 0.1);
+    backdrop-filter: blur(10px);
+    height: calc(100% - 20px);
+    width: calc(100% - 20px);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 5px 5px 30px rgba(0,0,0,0.3);
+    transition: 0.5s ease-in-out;
+}
+.container .card:hover .imgbx {
+    height: 150px ;
+    width: 150px;
+    left: -75px;
+    top: calc(50% - 80px);
+}
+.container .card:hover .imgbx img {
+    filter: invert(17%) sepia(92%) saturate(6216%) hue-rotate(332deg) brightness(96%) contrast(112%);
+    color: #ff4ef6;
+    transition: 0.5s ease-in-out;
+    transform: rotate(360deg);
+}
+
+.container .card .content {
+    position: absolute;
+    right: 0;
+    width: calc(100% - 75px);
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .card .content h3 {
+    color: #ff0057;
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+.container .card .content a{
+    display: inline-block;
+    margin-top: 10px;
+    padding:  8px 20px;
+    border-radius: 5px ;
+    background: #2ea8ff;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding-top: 10px;
+}
+.container .card .content a:hover{
+    color: aliceblue;
+    background-color:#035bff ;
+}
+
+@media (max-width: 992px){
+    .container{
+        position: relative;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .container .card{
+        width: 100%;
+        height: auto;
+        flex-direction: column; /*bottom row*/
+        background: transparent;
+        margin: -20px 0;
+        box-shadow: none;
+    }
+    .container .card .imgbx {
+        position: relative;
+    }
+    .container .card .imgbx,
+    .container .card:hover .imgbx {
+        width: 80%;
+        height: 150px;
+        top: 100px;
+        left: 10%;
+    }
+    .container .card:hover .imgbx{
+        top: 80px;
+    }
+    .container .card .imgbx,
+    .container .card:hover .imgbx{
+        max-width: 300px;
+    }
+    .container .card .content {
+        position: relative;
+        width: 100%;
+        background: #fff;
+        box-shadow: none;
+        border-radius: 20px;
+        padding: 20px 40px;
+        border-top: 100px solid #fff ;
+    }
+    .text{
+        text-align: center;
+    }
+}
